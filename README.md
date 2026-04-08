@@ -1,2 +1,2 @@
-A09. How to use CSS for page layout (Chpt 6)
+A09. Add Town Hall Navigation (Chpt 07)
 
