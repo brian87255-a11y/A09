@@ -1,5 +1,5 @@
 :root {
-	--accent-color: #800000;
+	--accent-color: #800000;  
 	--menu-light: white;
 	--menu-mid: antiquewhite;
 	--menu-dark: #333;
@@ -210,4 +210,8 @@ footer {
 
 .large {
 	font-size: 125%;
+}
+
+.circle-list {
+	list-style-type: circle;
 }
