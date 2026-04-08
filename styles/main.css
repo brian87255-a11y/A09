@@ -1,5 +1,8 @@
 :root {
-	--accent-color: #800000;  
+	--accent-color: #800000;
+	--menu-light: white;
+	--menu-mid: antiquewhite;
+	--menu-dark: #333;
 }
 
 * {
@@ -64,6 +67,60 @@ header {
 		min-width: 40px;
 		max-width: 80px;
 	}
+}
+
+.navbar {
+	background-color: var(--accent-color);
+
+	& a {
+		display: block;
+		padding: 1em;
+		margin: 0 1px 2px;
+		text-decoration: none;
+		color: var(--menu-light);
+	}
+	& a:hover, & a:focus, & a.current {
+		background-color: var(--menu-mid);
+		color: var(--menu-dark);
+		font-style: normal;
+	}
+	& ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}
+
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+
+	& li {
+		flex-basis: 20%;
+		text-align: center;
+		position: relative;
+	}
+	& small {
+		margin-left: .3em;
+	}
+	& > li:first-child a { margin-left: 0; }
+	& > li:last-child a { margin-right: 0; }
+}
+
+.submenu {
+	display: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-color: var(--accent-color);
+	color: var(--menu-light);
+	z-index: 100;
+
+	& > li a { margin: 0 2px 2px; }
+}
+
+.menu li:hover > .submenu {
+	display: block;
 }
 
 main {
